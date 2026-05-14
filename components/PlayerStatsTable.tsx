@@ -76,7 +76,7 @@ export function PlayerStatsTable({ stats }: Props) {
   return (
     <div className="overflow-hidden rounded-2xl bg-white shadow">
       <div className="overflow-x-auto">
-        <table className="w-full text-left text-sm">
+        <table className="w-full text-left text-sm text-slate-900">
           <thead className="bg-slate-900 text-white">
             <tr>
               <Header label="#" sortKey="jerseyNumber" onSort={handleSort} sortLabel={sortLabel} center />

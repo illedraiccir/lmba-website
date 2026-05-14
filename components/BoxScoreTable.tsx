@@ -75,7 +75,7 @@ export function BoxScoreTable({ teamName, stats }: BoxScoreTableProps) {
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full text-left text-sm">
+        <table className="w-full text-left text-sm text-slate-900">
           <thead className="bg-slate-100 text-slate-600">
             <tr>
               <Header label="#" sortKey="jerseyNumber" onSort={handleSort} sortLabel={sortLabel} center />

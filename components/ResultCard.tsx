@@ -48,7 +48,7 @@ export function ResultCard({ game }: ResultCardProps) {
           </span>
         </div>
 
-        <div className="grid items-center gap-5 md:grid-cols-[1fr_auto_1fr]">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
           <TeamResult
             label="Away"
             teamName={awayTeam?.teamName ?? game.awayTeamId}
@@ -56,7 +56,7 @@ export function ResultCard({ game }: ResultCardProps) {
             isWinner={awayWon}
           />
 
-          <div className="hidden rounded-full bg-slate-100 px-3 py-1 text-sm font-bold text-slate-400 md:block">
+          <div className="rounded-full bg-slate-100 px-3 py-1 text-sm font-bold text-slate-400">
             @
           </div>
 
@@ -133,12 +133,12 @@ function TeamResult({
         {label}
       </p>
 
-      <h3 className="text-xl font-extrabold leading-tight text-slate-900">
+      <h3 className="text-base font-extrabold leading-tight text-slate-900 sm:text-xl">
         {teamName}
       </h3>
 
       <p
-        className={`mt-2 text-5xl font-black ${
+        className={`mt-2 text-4xl font-black sm:text-5xl ${
           isWinner ? "text-slate-950" : "text-slate-400"
         }`}
       >

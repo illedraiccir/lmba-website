@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { teams } from "@/data";
 import type { StandingRow } from "@/lib/standings";
+import Link from "next/link";
 
 type SortKey =
   | "rank"
@@ -65,7 +66,7 @@ export function StandingsTable({ standings }: Props) {
 
   return (
     <div className="overflow-hidden rounded-2xl bg-white shadow">
-      <table className="w-full border-collapse text-left">
+      <table className="w-full border-collapse text-left text-slate-900">
         <thead className="bg-slate-900 text-white">
           <tr>
             <Header label="Rank" sortKey="rank" onSort={handleSort} sortLabel={sortLabel} />
@@ -106,7 +107,12 @@ export function StandingsTable({ standings }: Props) {
                       }}
                     />
 
-                    <span className="font-bold">{team.teamName}</span>
+                    <Link
+                      href={`/teams/${team.teamId}`}
+                      className="font-bold text-blue-700 hover:underline"
+                    >
+                      {team.teamName}
+                    </Link>
                   </div>
                 </td>
 
