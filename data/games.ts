@@ -89,8 +89,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Hash-Slinging Slashers Clamp Down Early To Cruise Past Prestige Worldwide",
-    "recapTeaser": "Hash-Slinging Slashers controlled the game from the opening tip, building a 12-point halftime lead before finishing off a comfortable 48-33 win over Prestige Worldwide. Strong defense and balanced scoring helped the Slashers improve to 1-0 on the young season.",
+    "headline": "Hash-Slinging Slashers Clamp Down Early To Cruise Past Prestige Worldwide",
+    "recapTeaser": "Hash-Slinging Slashers controlled the game from the opening tip, building a 12-point halftime lead before finishing off a comfortable 48-33 win over Prestige Worldwide. Strong defense and balanced scoring helped the Slashers improve to 1-0 on the young season."
   },
   {
     "gameId": "2026-w2-g02",
@@ -108,7 +108,7 @@ export const games: Game[] = [
     "status": "final",
     "resultType": "normal",
     "headline": "Nkenna drains long-range, step-back 3 at the buzzer to lift Free Agents over Thrillers",
-    "recapTeaser" : "Free-Agent Team pulled off a thrilling 41-38 victory over Thrillers thanks to a clutch buzzer-beater from sharpshooter Nkenna. With the game tied and the clock winding down, Nkenna stepped back beyond the arc and drained a deep three-pointer as time expired to secure the win for Free Agents in a game that had been neck-and-neck throughout. The victory marks a strong start for Free-Agent Team, while Thrillers will look to bounce back in their next outing."
+    "recapTeaser": "Free-Agent Team pulled off a thrilling 41-38 victory over Thrillers thanks to a clutch buzzer-beater from sharpshooter Nkenna. With the game tied and the clock winding down, Nkenna stepped back beyond the arc and drained a deep three-pointer as time expired to secure the win for Free Agents in a game that had been neck-and-neck throughout. The victory marks a strong start for Free-Agent Team, while Thrillers will look to bounce back in their next outing."
   },
   {
     "gameId": "2026-w2-g03",
@@ -129,8 +129,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Ball Starz Stay Unbeaten Behind Guy Johnson’s Five Threes",
-    "recapTeaser": "Ball Starz used a balanced offensive attack and another explosive outing from Guy Johnson to defeat Department of Offense 54-44. Johnson knocked down five triples and scored 19 points as Ball Starz controlled the game from start to finish.",
+    "headline": "Ball Starz Stay Unbeaten Behind Guy Johnson’s Five Threes",
+    "recapTeaser": "Ball Starz used a balanced offensive attack and another explosive outing from Guy Johnson to defeat Department of Offense 54-44. Johnson knocked down five triples and scored 19 points as Ball Starz controlled the game from start to finish."
   },
   {
     "gameId": "2026-w2-g04",
@@ -147,8 +147,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Trust The Process Pull Away Late To Secure First Win Of Season",
-    "recapTeaser": "Trust The Process turned a competitive matchup into a comfortable double-digit victory in the second half, defeating Prestige Worldwide 52-40. A strong defensive effort helped TTP lock down the game late and even their record.",
+    "headline": "Trust The Process Pull Away Late To Secure First Win Of Season",
+    "recapTeaser": "Trust The Process turned a competitive matchup into a comfortable double-digit victory in the second half, defeating Prestige Worldwide 52-40. A strong defensive effort helped TTP lock down the game late and even their record."
   },
   {
     "gameId": "2026-w2-g05",
@@ -165,8 +165,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "LMBA Jam Explodes For 70 In Statement Win Over Free Agent Team",
-    "recapTeaser": "LMBA Jam delivered one of the league’s most dominant offensive performances of the season, rolling past the Free Agent Team 70-39. Jam’s relentless pace and transition offense overwhelmed the Free Agents from the opening minutes.",
+    "headline": "LMBA Jam Explodes For 70 In Statement Win Over Free Agent Team",
+    "recapTeaser": "LMBA Jam delivered one of the league’s most dominant offensive performances of the season, rolling past the Free Agent Team 70-39. LMBA Jam’s relentless pace and transition offense overwhelmed the Free Agents from the opening minutes."
   },
   {
     "gameId": "2026-w2-g06",
@@ -187,8 +187,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Hash-Slinging Slashers Dominate Second Half To Upset LMBA Jam",
-    "recapTeaser": "After entering halftime tied at 20, Hash-Slinging Slashers completely took over in the second half to stun LMBA Jam 49-32. The Slashers outscored Jam 29-12 after the break in one of the league’s strongest defensive performances so far this season.",
+    "headline": "Hash-Slinging Slashers Dominate Second Half To Upset Short-Handed LMBA Jam",
+    "recapTeaser": "After entering halftime tied at 20, Hash-Slinging Slashers completely took over in the second half to defeat a severely depleted LMBA Jam squad 49-32. LMBA Jam was limited to just five available players and missing key contributors Shelepets, Homsher, Brusseler, and Ziller, as the Slashers outscored them 29-12 after the break in one of the league’s strongest defensive performances of the season."
   },
   {
     "gameId": "2026-w2-g07",
@@ -209,8 +209,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Thrillers Rally Again, Erase Seven-Point Halftime Deficit Against Ball Starz",
-    "recapTeaser": "For the second time in two weeks, Thrillers stormed back in the second half to steal a win, defeating Ball Starz 53-45. After trailing by seven at halftime, Thrillers exploded for 34 second-half points to complete another comeback victory.",
+    "headline": "Thrillers Rally Again, Erase Seven-Point Halftime Deficit Against Ball Starz",
+    "recapTeaser": "For the second time in two weeks, Thrillers stormed back in the second half to steal a win, defeating Ball Starz 53-45. After trailing by seven at halftime, Thrillers exploded for 34 second-half points behind Doug Adams, who poured in 20 points overall with 12 coming after the break to fuel another comeback victory."
   },
   {
     "gameId": "2026-w2-g08",
@@ -231,8 +231,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Department Of Offense Erupts For 69 In High-Scoring Win Over Trust The Process",
-    "recapTeaser": "Department of Offense jumped out to a 14-point halftime lead and never looked back in a 69-56 victory over Trust The Process. Even after TTP mounted a stronger second half, D.O.O. continued to answer offensively to secure the win.",
+    "headline": "Department Of Offense Erupts For 69 In High-Scoring Win Over Trust The Process",
+    "recapTeaser": "Department of Offense jumped out to a 14-point halftime lead and never looked back in a 69-56 victory over Trust The Process. Even after TTP mounted a stronger second half, D.O.O. continued to answer offensively to secure the win."
   },
   {
     "gameId": "2026-w3-g01",
@@ -253,8 +253,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Hash-Slinging Slashers Continue Defensive Tear In Blowout Win",
-    "recapTeaser": "Hash-Slinging Slashers suffocated the Free Agent Team defensively from start to finish, cruising to a 61-32 victory. The Slashers built a 19-point halftime lead and never allowed the Free Agents back into the game.",
+    "headline": "Hash-Slinging Slashers Continue Defensive Tear In Blowout Win",
+    "recapTeaser": "Hash-Slinging Slashers suffocated the Free Agent Team defensively from start to finish, cruising to a 61-32 victory. The Slashers built a 19-point halftime lead and never allowed the Free Agents back into the game."
   },
   {
     "gameId": "2026-w3-g02",
@@ -275,8 +275,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Trust The Process Pull Away Late To Stay Hot",
-    "recapTeaser": "Trust The Process used a huge second half to break open a close game and defeat Prestige Worldwide 60-42. After leading by just four at halftime, TTP outscored Prestige 37-23 after the break.",
+    "headline": "Trust The Process Pull Away Late To Stay Hot",
+    "recapTeaser": "Trust The Process used a huge second half to break open a close game and defeat Prestige Worldwide 60-42. After leading by just four at halftime, TTP outscored Prestige 37-23 after the break behind a dominant second-half performance from Hakim Jackson, who scored 13 of his 17 points after halftime."
   },
   {
     "gameId": "2026-w3-g03",
@@ -293,8 +293,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "LMBA Jam Outlast Department Of Offense In Offensive Showcase",
-    "recapTeaser": "LMBA Jam continued its offensive resurgence with a 65-55 win over Department of Offense. LMBA Jam controlled the pace throughout the night and held off multiple D.O.O. runs to close out the 10-point victory.",
+    "headline": "LMBA Jam Outlast Department Of Offense In Offensive Showcase",
+    "recapTeaser": "LMBA Jam continued its offensive resurgence with a 65-55 win over Department of Offense. LMBA Jam controlled the pace throughout the night and held off multiple D.O.O. runs to close out the 10-point victory."
   },
   {
     "gameId": "2026-w3-g04",
@@ -311,8 +311,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Ball Starz Hold 3-Point Contest In Blowout Win Over Free Agent Team; 22 Triples On Night For Ball Starz",
-    "recapTeaser": "Ball Starz delivered the most explosive offensive performance of the season, overwhelming the Free Agent Team 90-41. The Ball Starz pushed the tempo all night and never let up, doubling up their opponent on the scoreboard.",
+    "headline": "Ball Starz Turn Wednesday Night Into A Track Meet In 90-41 Rout",
+    "recapTeaser": "Ball Starz delivered the most explosive offensive performance of the season, overwhelming the Free Agent Team 90-41. The Ball Starz pushed the tempo from the opening tip and never let up, turning the matchup into a full-court track meet while doubling up Free Agent Team on the scoreboard."
   },
   {
     "gameId": "2026-w3-g05",
@@ -329,8 +329,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Trust The Process Lock Down Thrillers In Statement Victory",
-    "recapTeaser": "Trust The Process continued its strong midseason run with a convincing 64-48 win over Thrillers. TTP controlled both ends of the floor throughout the game and never allowed Thrillers to build consistent momentum.",
+    "headline": "Trust The Process Lock Down Thrillers In Statement Victory",
+    "recapTeaser": "Trust The Process continued its strong midseason run with a convincing 64-48 win over Thrillers. TTP controlled both ends of the floor throughout the game and never allowed Thrillers to build consistent momentum."
   },
   {
     "gameId": "2026-w3-g06",
@@ -351,8 +351,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "LMBA Jam Steamroll Thrillers Behind Massive First Half",
-    "recapTeaser": "LMBA Jam buried Thrillers early and never looked back in a dominant 66-28 victory. LMBA Jam raced out to a 34-15 halftime lead before completely shutting the door with another huge second half.",
+    "headline": "LMBA Jam Steamroll Thrillers Behind Massive First Half",
+    "recapTeaser": "LMBA Jam buried Thrillers early and never looked back in a dominant 66-28 victory. LMBA Jam raced out to a 34-15 halftime lead before completely shutting the door with another huge second half behind Anthony Shelepets, who poured in 26 points in the win."
   },
   {
     "gameId": "2026-w3-g07",
@@ -373,8 +373,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Hash-Slinging Slashers Stay Red Hot With Wire-To-Wire Win",
-    "recapTeaser": "Hash-Slinging Slashers continued their impressive run with a 54-45 victory over Prestige Worldwide. The Slashers led by nine at halftime and matched Prestige basket-for-basket in the second half to finish off the win.",
+    "headline": "Hash-Slinging Slashers Stay Red Hot With Wire-To-Wire Win",
+    "recapTeaser": "Hash-Slinging Slashers continued their impressive run with a 54-45 victory over Prestige Worldwide. The Slashers led by nine at halftime and matched Prestige basket-for-basket in the second half to finish off the win."
   },
   {
     "gameId": "2026-w4-g01",
@@ -391,8 +391,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Trust The Process Explodes For 83 In Blowout Victory",
-    "recapTeaser": "Trust The Process explode offensively in an 83-55 rout of the Free Agent Team. TTP pushed the pace from the opening tip and never slowed down.",
+    "headline": "Trust The Process Explodes For 83 In Blowout Victory",
+    "recapTeaser": "Trust The Process explode offensively in an 83-55 rout of the Free Agent Team. TTP pushed the pace from the opening tip and never slowed down."
   },
   {
     "gameId": "2026-w4-g02",
@@ -409,8 +409,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Prestige Worldwide Sneak Past Department Of Offense In Defensive Battle",
-    "recapTeaser": "Prestige Worldwide survived a low-scoring thriller against Department of Offense, escaping with a 48-45 win. A clutch finish and timely defensive stops helped Prestige secure the narrow victory.",
+    "headline": "Prestige Worldwide Sneak Past Department Of Offense In Defensive Battle For First Win",
+    "recapTeaser": "Prestige Worldwide survived a low-scoring thriller against Department of Offense, escaping with a 48-45 win for their first victory of the season. In his season debut, Travis Gibbs sparked Prestige with 15 points and five three-pointers, while timely defensive stops and clutch late possessions sealed the narrow win."
   },
   {
     "gameId": "2026-w4-g03",
@@ -431,8 +431,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Ball Starz Defense Suffocates Slashers In 25-Point Blowout",
-    "recapTeaser": "Ball Starz delivered a dominant two-way performance in a 50-25 dismantling of Hash-Slinging Slashers. After building an 11-point halftime advantage, the Starz completely shut down the Slashers offense in the second half.",
+    "headline": "Ball Starz Defense Suffocates Slashers In 25-Point Blowout",
+    "recapTeaser": "Ball Starz delivered a dominant two-way performance in a 50-25 dismantling of Hash-Slinging Slashers. After building an 11-point halftime advantage, the Starz completely shut down the Slashers offense in the second half."
   },
   {
     "gameId": "2026-w4-g04",
@@ -453,8 +453,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "LMBA Jam Pull Away Late After First-Half Shootout",
-    "recapTeaser": "LMBA Jam broke open a tied game after halftime to defeat Prestige Worldwide 59-48. After both teams entered the break deadlocked at 32, LMBA Jam tightened up defensively and controlled the final stretch.",
+    "headline": "LMBA Jam Pull Away Late After First-Half Shootout",
+    "recapTeaser": "LMBA Jam broke open a tied game after halftime to defeat Prestige Worldwide 59-48. After both teams entered the break deadlocked at 32, LMBA Jam tightened up defensively and controlled the final stretch."
   },
   {
     "gameId": "2026-w4-g05",
@@ -476,7 +476,7 @@ export const games: Game[] = [
     "status": "final",
     "resultType": "normal",
     "headline": "Trust The Process Survive Overtime Thriller Against Slashers",
-    "recapTeaser": "Trust The Process erased a five-point halftime deficit and survived overtime to edge Hash-Slinging Slashers 62-53. TTP closed regulation strong before taking complete control in the extra period.",
+    "recapTeaser": "Trust The Process erased a five-point halftime deficit and survived overtime to edge Hash-Slinging Slashers 62-53. TTP closed regulation strong before taking complete control in the extra period."
   },
   {
     "gameId": "2026-w5-g01",
@@ -498,7 +498,7 @@ export const games: Game[] = [
     "status": "final",
     "resultType": "normal",
     "headline": "Ball Starz Drop Another 90-Piece In Rout Of Free Agent Team",
-    "recapTeaser": "Ball Starz continued their offensive dominance with a second 90-point performance in the previous three games, crushing the Free Agent Team 90-36. The Ball Starz led by 22 at halftime before exploding for 49 second-half points.",
+    "recapTeaser": "Ball Starz continued their offensive dominance with a second 90-point performance in the previous three games, crushing the Free Agent Team 90-36. The Ball Starz led by 22 at halftime before exploding for 49 second-half points."
   },
   {
     "gameId": "2026-w5-g02",
@@ -520,7 +520,7 @@ export const games: Game[] = [
     "status": "final",
     "resultType": "normal",
     "headline": "Department Of Offense Hold Off Furious Thrillers Comeback",
-    "recapTeaser": "Department of Offense looked headed for a blowout after building a 19-point halftime lead, but Thrillers mounted a huge second-half rally before ultimately falling 61-52. D.O.O. did just enough late to escape with the win.",
+    "recapTeaser": "Department of Offense looked headed for a blowout after building a 19-point halftime lead, but Thrillers mounted a huge second-half rally before ultimately falling 61-52. D.O.O. did just enough late to escape with the win."
   },
   {
     "gameId": "2026-w5-g03",
@@ -542,7 +542,7 @@ export const games: Game[] = [
     "status": "final",
     "resultType": "normal",
     "headline": "Ball Starz Cruise Past Thrillers Behind Dominant First Half",
-    "recapTeaser": "Ball Starz got their revenge from their early season loss to the Thrillers. Ball Starzjumped out early and never allowed Thrillers back into the game in a 58-42 victory. The Ball Starz carried a 17-point lead into halftime and controlled the tempo throughout the night.",
+    "recapTeaser": "Ball Starz got their revenge from their early season loss to the Thrillers. Ball Starzjumped out early and never allowed Thrillers back into the game in a 58-42 victory. The Ball Starz carried a 17-point lead into halftime and controlled the tempo throughout the night."
   },
   {
     "gameId": "2026-w5-g04",
@@ -560,7 +560,7 @@ export const games: Game[] = [
     "status": "final",
     "resultType": "forfeitHome",
     "headline": "Department Of Offense Awarded Forfeit Victory Over Slashers",
-    "recapTeaser": "Department of Offense earned a 60-20 forfeit victory after Hash-Slinging Slashers were unable to field a valid lineup. The result keeps D.O.O. firmly in the playoff seeding mix heading into Week 6.",
+    "recapTeaser": "Department of Offense earned a 60-20 forfeit victory after Hash-Slinging Slashers were unable to field a valid lineup. The result keeps D.O.O. firmly in the playoff seeding mix heading into Week 6."
   },
   {
     "gameId": "2026-w5-g05",
@@ -582,7 +582,7 @@ export const games: Game[] = [
     "status": "final",
     "resultType": "normal",
     "headline": "LMBA Jam Win Offensive Shootout Against Trust The Process",
-    "recapTeaser": "LMBA Jam outlasted Trust The Process in one of the season’s highest-scoring games, earning a 72-60 victory. LMBA Jam led by just two at halftime before pulling away behind a massive 41-point second half.",
+    "recapTeaser": "LMBA Jam outlasted Trust The Process in one of the season’s highest-scoring games, earning a 72-60 victory. LMBA Jam led by just two at halftime before pulling away behind a massive 41-point second half."
   },
   {
     "gameId": "2026-w6-g01",
@@ -604,7 +604,7 @@ export const games: Game[] = [
     "status": "final",
     "resultType": "normal",
     "headline": "Department Of Offense Deliver Week 6 Beatdown Of Free Agent Team",
-    "recapTeaser": "Department of Offense overwhelmed the Free Agent Team from the opening tip in a lopsided 71-20 victory. D.O.O. built a 21-point halftime lead and completely shut the door by allowing just five second-half points.",
+    "recapTeaser": "Department of Offense overwhelmed the Free Agent Team from the opening tip in a lopsided 71-20 victory. D.O.O. built a 21-point halftime lead and completely shut the door by allowing just five second-half points."
   },
   {
     "gameId": "2026-w6-g02",
@@ -625,9 +625,8 @@ export const games: Game[] = [
     "overtimePeriods": 0,
     "status": "final",
     "resultType": "normal",
-    "headline" : "Thin Ball Starz Squad Handle Week 6 Challenge From Prestige Worldwide With Ease",
-    "recapTeaser" : "Ball Starz continued their dominant season with a convincing 76-48 win over Prestige Worldwide. MVP Front-Runner Guy Johnson was a surprise no-show come tip-off. Despite no bench, the Ball Starz built a 28-point halftime lead and cruised to another victory.",
-
+    "headline": "Thin Ball Starz Squad Handle Week 6 Challenge From Prestige Worldwide With Ease",
+    "recapTeaser": "Ball Starz continued their dominant season with a convincing 76-48 win over Prestige Worldwide. MVP Front-Runner Guy Johnson was a surprise no-show come tip-off. Despite no bench, the Ball Starz built a 28-point halftime lead and cruised to another victory."
   },
   {
     "gameId": "2026-w6-g03",
@@ -639,7 +638,17 @@ export const games: Game[] = [
     "location": "Moorestown Upper Elementary",
     "homeTeamId": "lmba-jam",
     "awayTeamId": "hash-slinging-slashers",
-    "status": "scheduled"
+    "status": "final",
+    "firstHalfHomeScore": 27,
+    "firstHalfAwayScore": 30,
+    "secondHalfHomeScore": 40,
+    "secondHalfAwayScore": 34,
+    "homeScore": 67,
+    "awayScore": 64,
+    "overtimePeriods": 0,
+    "resultType": "normal",
+    "headline": "LMBA Jam Explode For 40 Second-Half Points To Outlast Hash-Slinging Slashers",
+    "recapTeaser": "LMBA Jam exploded for 40 second-half points to erase a halftime deficit and defeat Hash-Slinging Slashers 67-64 in a Week 6 thriller. Chris Clemente buried four second-half threes while Jam sealed the win at the line, finishing a perfect 7-for-7 on clutch free throws down the stretch."
   },
   {
     "gameId": "2026-w6-g04",
@@ -651,7 +660,13 @@ export const games: Game[] = [
     "location": "Moorestown Upper Elementary",
     "homeTeamId": "thrillers",
     "awayTeamId": "trust-the-process",
-    "status": "scheduled"
+    "status": "final",
+    "homeScore": 50,
+    "awayScore": 82,
+    "overtimePeriods": 0,
+    "resultType": "normal",
+    "headline": "Trust The Process Explode For 82 In Offensive Clinic Against Thrillers",
+    "recapTeaser": "Trust The Process turned in one of the league’s most complete offensive performances of the season, rolling past Thrillers 82-50 in Week 6. TTP buried 13 three-pointers and featured a balanced scoring attack led by Kevin Tierney’s 18 points and Jordan Wilcox’s 17, while Doug Adams kept Thrillers competitive early with a game-high 27 points and five triples."
   },
   {
     "gameId": "2026-w6-g05",
@@ -663,7 +678,13 @@ export const games: Game[] = [
     "location": "Moorestown Upper Elementary",
     "homeTeamId": "prestige-worldwide",
     "awayTeamId": "free-agent-team",
-    "status": "scheduled"
+    "homeScore": 60,
+    "awayScore": 20,
+    "overtimePeriods": 0,
+    "status": "final",
+    "resultType": "forfeitAway",
+    "headline": "Prestige Worldwide Awarded Forfeit Victory Over Free Agents",
+    "recapTeaser": "Prestige Worldwide earned a 60-20 forfeit victory after Free Agents were unable to field a valid lineup. The result gives Prestige Worldwide their second win of the season to vie for better playoff seeding ahead of Week 7."
   },
   {
     "gameId": "2026-w6-g06",
@@ -675,7 +696,17 @@ export const games: Game[] = [
     "location": "Moorestown Upper Elementary",
     "homeTeamId": "ball-starz",
     "awayTeamId": "trust-the-process",
-    "status": "scheduled"
+    "status": "final",
+    "firstHalfHomeScore": 29,
+    "firstHalfAwayScore": 41,
+    "secondHalfHomeScore": 41,
+    "secondHalfAwayScore": 27,
+    "homeScore": 70,
+    "awayScore": 68,
+    "overtimePeriods": 0,
+    "resultType": "normal",
+    "headline": "INSTANT CLASSIC! Ball Starz Close On 35-10 Run To Erase 23-Point Second-Half Deficit",
+    "recapTeaser": "In one of the wildest games in recent history, Ball Starz stormed back from a 35-58 second-half deficit with under 12 minutes remaining to stun Trust The Process 70-68. Contributions from a multitude of players were critical down the final 12-minute stretch; Ricciardelli (8pts), Fontanazza (8pts), Denson (10pts), and Guy (11 pts) . Guy Johnson drilled a game-tying three with 13 seconds left before a costly TTP backcourt violation gave Ball Starz one final chance. Moments later, Ryan Fontanazza was fouled on a three-point attempt with 3.5 seconds remaining and calmly knocked down two clutch free throws to complete the comeback. Trust The Process repeatedly missed critical one-and-one FT opportunities down the stretch, opening the door for the furious 35-10 Ball Starz finish, while Jeff Savage’s half-court buzzer heave nearly stole the game back at the horn."
   },
   {
     "gameId": "2026-w6-g07",

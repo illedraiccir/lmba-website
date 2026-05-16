@@ -31,14 +31,16 @@ function TeamScore({
 }) {
   return (
     <div className={alignRight ? "text-right" : ""}>
-      <p className="text-xs font-bold uppercase tracking-wide text-slate-400">
+      <p className="text-xs font-extrabold uppercase tracking-wide text-slate-400">
         {label}
       </p>
 
-      <h2 className="text-2xl font-extrabold text-slate-900">{teamName}</h2>
+      <h2 className="mt-1 text-2xl font-black leading-tight text-slate-950">
+        {teamName}
+      </h2>
 
       <p
-        className={`mt-2 text-5xl font-extrabold ${
+        className={`mt-3 text-6xl font-black ${
           isWinner ? "text-slate-950" : "text-slate-400"
         }`}
       >
@@ -53,66 +55,85 @@ export function GameSummaryHeader({
   awayTeam,
   homeTeam,
 }: GameSummaryHeaderProps) {
+  const hasHalftimeScores =
+    typeof game.firstHalfAwayScore === "number" &&
+    typeof game.firstHalfHomeScore === "number" &&
+    typeof game.secondHalfAwayScore === "number" &&
+    typeof game.secondHalfHomeScore === "number";
+
+  const awayTeamName = awayTeam?.teamName ?? game.awayTeamId;
+  const homeTeamName = homeTeam?.teamName ?? game.homeTeamId;
+
+  const awayWon = (game.awayScore ?? 0) > (game.homeScore ?? 0);
+  const homeWon = (game.homeScore ?? 0) > (game.awayScore ?? 0);
+
   return (
-    <section className="mt-6 overflow-hidden rounded-2xl bg-white shadow">
+    <section className="mt-6 overflow-hidden rounded-3xl bg-white shadow">
       <div className="grid h-3 grid-cols-2">
         <div style={{ backgroundColor: awayTeam?.primaryColor ?? "#CBD5E1" }} />
         <div style={{ backgroundColor: homeTeam?.primaryColor ?? "#CBD5E1" }} />
       </div>
 
-      <div className="p-8">
-        <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-          Week {game.week} • {formatDate(game.date)} • {game.time}
-        </p>
+      <div className="p-6 md:p-8">
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+          <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-extrabold uppercase tracking-wide text-slate-500">
+            Week {game.week} • {formatDate(game.date)} • {game.time}
+          </span>
 
-        <div className="mt-6 grid items-center gap-6 md:grid-cols-[1fr_auto_1fr]">
+          <span className="rounded-full bg-slate-950 px-4 py-2 text-sm font-extrabold uppercase text-white">
+            Final{game.overtimePeriods ? ` / ${game.overtimePeriods}OT` : ""}
+          </span>
+        </div>
+
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
           <TeamScore
             label="Away"
-            teamName={awayTeam?.teamName ?? game.awayTeamId}
+            teamName={awayTeamName}
             score={game.awayScore}
-            isWinner={(game.awayScore ?? 0) > (game.homeScore ?? 0)}
+            isWinner={awayWon}
           />
 
-          <div className="text-center text-sm font-bold uppercase tracking-wide text-slate-400">
-            Final{game.overtimePeriods ? ` / ${game.overtimePeriods}OT` : ""}
+          <div className="rounded-full bg-slate-100 px-4 py-3 text-lg font-black text-slate-400">
+            @
           </div>
 
           <TeamScore
             label="Home"
-            teamName={homeTeam?.teamName ?? game.homeTeamId}
+            teamName={homeTeamName}
             score={game.homeScore}
-            isWinner={(game.homeScore ?? 0) > (game.awayScore ?? 0)}
+            isWinner={homeWon}
             alignRight
           />
         </div>
 
-        {game.firstHalfAwayScore !== undefined &&
-        game.firstHalfHomeScore !== undefined &&
-        game.secondHalfAwayScore !== undefined &&
-        game.secondHalfHomeScore !== undefined && (
-          <div className="mt-5 rounded-2xl bg-slate-50 p-4">
-            <div className="grid grid-cols-3 text-center text-sm">
-              <div className="font-bold text-slate-700">Team</div>
-              <div className="font-bold text-slate-700">1H</div>
-              <div className="font-bold text-slate-700">2H</div>
+        {hasHalftimeScores && (
+          <div className="mt-8 rounded-3xl bg-slate-50 p-5">
+            <div className="grid grid-cols-[1fr_80px_80px] items-center gap-3 text-center">
+              <p className="text-lg font-extrabold text-slate-500">Team</p>
+              <p className="text-lg font-extrabold text-slate-500">1H</p>
+              <p className="text-lg font-extrabold text-slate-500">2H</p>
 
-              <div className="mt-2 font-semibold text-slate-900">
-                {awayTeam?.teamName ?? game.awayTeamId}
-              </div>
-              <div className="mt-2 text-slate-700">{game.firstHalfAwayScore}</div>
-              <div className="mt-2 text-slate-700">{game.secondHalfAwayScore}</div>
+              <p className="font-extrabold text-slate-950">{awayTeamName}</p>
+              <p className="text-lg text-slate-700">
+                {game.firstHalfAwayScore}
+              </p>
+              <p className="text-lg text-slate-700">
+                {game.secondHalfAwayScore}
+              </p>
 
-              <div className="mt-2 font-semibold text-slate-900">
-                {homeTeam?.teamName ?? game.homeTeamId}
-              </div>
-              <div className="mt-2 text-slate-700">{game.firstHalfHomeScore}</div>
-              <div className="mt-2 text-slate-700">{game.secondHalfHomeScore}</div>
+              <p className="font-extrabold text-slate-950">{homeTeamName}</p>
+              <p className="text-lg text-slate-700">
+                {game.firstHalfHomeScore}
+              </p>
+              <p className="text-lg text-slate-700">
+                {game.secondHalfHomeScore}
+              </p>
             </div>
           </div>
         )}
 
         {game.headline && (
-          <h1 className="mt-8 text-3xl font-extrabold text-slate-900">
+          <h1 className="mt-8 text-3xl font-black leading-tight text-slate-950 md:text-4xl">
             {game.headline}
           </h1>
         )}

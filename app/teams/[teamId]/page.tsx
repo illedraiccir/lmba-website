@@ -2,15 +2,18 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   games,
-  playerGameStats,
   players,
   rosterSpots,
+  seasonTeams,
   teams,
 } from "@/data";
+
+import { weeklyAwards } from "@/data/weeklyAwards";
 import { GameCard } from "@/components/GameCard";
 import { TeamRosterStatsTable } from "@/components/TeamRosterStatsTable";
 import { getPlayerSeasonStats } from "@/lib/playerStats";
 import { getStandings } from "@/lib/standings";
+import { TeamAwardDialog } from "@/components/TeamAwardDialog";
 
 type PageProps = {
   params: Promise<{
@@ -29,6 +32,19 @@ export default async function TeamPage({ params }: PageProps) {
 
   const standings = getStandings("2026");
   const standing = standings.find((s) => s.teamId === team.teamId);
+
+  const seasonTeam = seasonTeams.find(
+    (seasonTeam) =>
+      seasonTeam.seasonId === "2026" && seasonTeam.teamId === team.teamId
+  );
+
+  const captain = players.find(
+    (player) => player.playerId === seasonTeam?.captainPlayerId
+  );
+
+  const teamAwards = weeklyAwards.filter(
+    (award) => award.seasonTeamId === seasonTeam?.seasonTeamId
+  );
 
   const roster = rosterSpots
     .filter((spot) => spot.seasonId === "2026" && spot.teamId === team.teamId)
@@ -103,6 +119,18 @@ export default async function TeamPage({ params }: PageProps) {
                 <h1 className="mt-3 text-5xl font-black tracking-tight text-slate-900">
                   {team.teamName}
                 </h1>
+
+                {captain && (
+                  <p className="mt-3 text-lg font-semibold text-slate-600">
+                    Captain:{" "}
+                    <Link
+                      href={`/players/${captain.playerId}`}
+                      className="font-extrabold text-blue-700 hover:underline"
+                    >
+                      {captain.displayName}
+                    </Link>
+                  </p>
+                )}
 
                 <div className="mt-5">
                   <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">
@@ -186,6 +214,29 @@ export default async function TeamPage({ params }: PageProps) {
 
           <TeamRosterStatsTable players={teamRosterStats} />
         </section>
+
+        {teamAwards.length > 0 && (
+          <section className="mt-8">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-2xl font-extrabold text-slate-900">
+                Awards & Honors
+              </h2>
+
+              <Link
+                href="/awards"
+                className="font-semibold text-blue-700 hover:underline"
+              >
+                View All Awards →
+              </Link>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {teamAwards.map((award) => (
+                <TeamAwardDialog key={award.awardId} award={award} />
+              ))}
+            </div>
+          </section>
+        )}
 
         <section className="mt-8">
           <div className="mb-4 flex items-center justify-between">

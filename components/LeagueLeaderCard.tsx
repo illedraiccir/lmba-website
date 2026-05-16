@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type Props = {
+type LeagueLeaderCardProps = {
   title: string;
   playerName: string;
   playerId: string;
@@ -14,31 +14,31 @@ export function LeagueLeaderCard({
   playerId,
   value,
   subtitle,
-}: Props) {
+}: LeagueLeaderCardProps) {
   return (
-    <div className="rounded-2xl bg-white p-6 shadow">
-      <p className="text-sm font-bold uppercase tracking-wide text-slate-500">
-        {title}
-      </p>
-
-      <div className="mt-4">
-        <Link
-          href={`/players/${playerId}`}
-          className="text-2xl font-extrabold text-blue-700 hover:underline"
-        >
-          {playerName}
-        </Link>
-
-        {subtitle && (
-          <p className="mt-1 text-sm text-slate-500">
-            {subtitle}
+    <article className="rounded-xl bg-white p-4 shadow">
+      <div className="flex items-center justify-between gap-4">
+        <div className="min-w-0">
+          <p className="text-xs font-extrabold uppercase tracking-wide text-blue-600">
+            {title}
           </p>
-        )}
-      </div>
 
-      <p className="mt-5 text-4xl font-extrabold text-slate-900">
-        {value}
-      </p>
-    </div>
+          <Link
+            href={`/players/${playerId}`}
+            className="mt-1 block truncate text-base font-black text-slate-900 hover:text-blue-700"
+          >
+            {playerName}
+          </Link>
+
+          {subtitle && (
+            <p className="mt-1 truncate text-xs font-semibold text-slate-500">
+              {subtitle}
+            </p>
+          )}
+        </div>
+
+        <p className="shrink-0 text-3xl font-black text-slate-950">{value}</p>
+      </div>
+    </article>
   );
 }

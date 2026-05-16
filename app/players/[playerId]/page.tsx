@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { playerGameStats, players, teams } from "@/data";
 import { PlayerGameLogTable } from "@/components/PlayerGameLogTable";
 import { getPlayerSeasonStats } from "@/lib/playerStats";
+import { weeklyAwards } from "@/data/weeklyAwards";
+import { AwardCard } from "@/components/AwardCard";
 
 type PageProps = {
   params: Promise<{
@@ -18,6 +20,13 @@ export default async function PlayerPage({ params }: PageProps) {
   if (!player) {
     notFound();
   }
+
+  const playerAwards = weeklyAwards
+    .filter(
+      (award) =>
+        award.seasonId === "2026" && award.playerId === player.playerId
+    )
+    .sort((a, b) => b.week - a.week);
 
   const seasonStats = getPlayerSeasonStats("2026");
 
@@ -144,6 +153,29 @@ export default async function PlayerPage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        {playerAwards.length > 0 && (
+          <section className="mt-8">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-2xl font-extrabold text-slate-900">
+                Awards & Honors
+              </h2>
+
+              <Link
+                href="/awards"
+                className="font-semibold text-blue-700 hover:underline"
+              >
+                View All Awards →
+              </Link>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {playerAwards.map((award) => (
+                <AwardCard key={award.awardId} award={award} />
+              ))}
+            </div>
+          </section>
+        )}
 
         <PlayerGameLogTable playerGames={playerGames} />
       </div>
