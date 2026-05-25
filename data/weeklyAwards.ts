@@ -262,5 +262,16 @@ export const weeklyAwards: WeeklyAward[] = [
     "seasonTeamId": "2026-thrillers",
     "title": "Despite The Loss...",
     "body": "Doug Adams did everything he could to keep Thrillers competitive against Trust The Process, exploding for 27 points and five threes while accounting for over half of the team’s offense in the loss."
+  },
+  {
+    awardId: "2026-w6-winning-time-award",
+    seasonId: "2026",
+    week: 6,
+    awardName: "Winning Time Award",
+    recipientName: "Brett Ziller",
+    playerId: "brett-ziller",
+    seasonTeamId: "2026-thrillers",
+    title: "Keeping Thrillers Alive",
+    body: "With Thrillers fighting to avoid a brutal first-round playoff matchup entering the final week of the regular season, Brett Ziller delivered one of the biggest performances of their season. Ziller poured in 24 points — including 10 in the second half — to lead Thrillers past Hash-Slinging Slashers and improve the team to 3-6. Even more impressive: Ziller has now been part of all three Thrillers victories this season, continuing to prove he’s the engine behind every big Thrillers win.",
   }
 ];
