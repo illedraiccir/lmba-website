@@ -1,11 +1,13 @@
 export type GameType = "regularSeason" | "playoffs" | "championship";
 export type GameStatus = "scheduled" | "final" | "postponed" | "cancelled";
 export type ResultType = "normal" | "forfeitHome" | "forfeitAway";
+export type PlayoffRound = "quarterfinal" | "semifinal";
 
 export type Game = {
   gameId: string;
   seasonId: string;
   gameType: GameType;
+  playoffRound?: PlayoffRound;
   week: number;
   date: string;
   time: string;
@@ -872,6 +874,7 @@ export const games: Game[] = [
     gameId: "2026-p-qf-g01",
     seasonId: "2026",
     gameType: "playoffs",
+    playoffRound: "quarterfinal",
     week: 8,
     date: "2026-06-02",
     time: "7:30 PM",
@@ -888,6 +891,7 @@ export const games: Game[] = [
     gameId: "2026-p-qf-g02",
     seasonId: "2026",
     gameType: "playoffs",
+    playoffRound: "quarterfinal",
     week: 8,
     date: "2026-06-02",
     time: "8:30 PM",
@@ -904,6 +908,7 @@ export const games: Game[] = [
     gameId: "2026-p-qf-g03",
     seasonId: "2026",
     gameType: "playoffs",
+    playoffRound: "quarterfinal",
     week: 8,
     date: "2026-06-03",
     time: "6:30 PM",
@@ -920,6 +925,7 @@ export const games: Game[] = [
     gameId: "2026-p-qf-g04",
     seasonId: "2026",
     gameType: "playoffs",
+    playoffRound: "quarterfinal",
     week: 8,
     date: "2026-06-03",
     time: "7:30 PM",

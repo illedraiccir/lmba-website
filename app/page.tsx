@@ -8,10 +8,24 @@ import { getCurrentWeekGames } from "@/lib/games";
 import { getPlayerSeasonStats } from "@/lib/playerStats";
 import { getStandings } from "@/lib/standings";
 import { LeagueLeaderList } from "@/components/LeagueLeaderList";
+import { getGameLabel } from "@/lib/gameLabels";
 
 export default function HomePage() {
   const standings = getStandings("2026");
-  const currentWeekGames = getCurrentWeekGames("2026");
+  const upcomingGames = games
+    .filter((game) => game.seasonId === "2026" && game.status === "scheduled")
+    .sort(
+      (a, b) =>
+        new Date(`${a.date} ${a.time}`).getTime() -
+        new Date(`${b.date} ${b.time}`).getTime()
+    );
+
+  const currentWeekGames = upcomingGames.length
+    ? upcomingGames
+    : getCurrentWeekGames("2026");
+
+  const slateLabel =
+    currentWeekGames.length > 0 ? getGameLabel(currentWeekGames[0]) : "This Week";
 
   const recentResults = games
     .filter((game) => game.seasonId === "2026" && game.status === "final")
@@ -71,7 +85,7 @@ const topThreePointLeaders = [...playerStats]
           <section id="slate" className="scroll-mt-28">
             <div className="mb-5 flex items-center justify-between">
               <h2 className="text-3xl font-extrabold text-slate-900">
-                This Week’s Slate
+                {slateLabel === "Quarterfinal" ? "Quarterfinal Matchups" : `${slateLabel} Slate`}
               </h2>
 
               <Link
