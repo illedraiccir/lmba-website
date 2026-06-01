@@ -1,4 +1,5 @@
 import { playerGameStats, teams } from "@/data";
+import { games } from "@/data";
 
 export type PlayerSeasonStat = {
   playerId: string;
@@ -17,7 +18,21 @@ export type PlayerSeasonStat = {
 };
 
 export function getPlayerSeasonStats(seasonId = "2026"): PlayerSeasonStat[] {
-  const statRows = playerGameStats.filter((stat) => stat.seasonId === seasonId);
+  const regularSeasonGameIds = new Set(
+    games
+      .filter(
+        (game) =>
+          game.seasonId === seasonId &&
+          game.gameType === "regularSeason"
+      )
+      .map((game) => game.gameId)
+  );
+
+  const statRows = playerGameStats.filter(
+    (stat) =>
+      stat.seasonId === seasonId &&
+      regularSeasonGameIds.has(stat.gameId)
+  );
 
   const statsByPlayer = new Map<string, PlayerSeasonStat>();
 

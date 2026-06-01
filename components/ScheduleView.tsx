@@ -24,17 +24,17 @@ export function ScheduleView({ games, teams }: Props) {
     );
   }, [games, selectedTeamId]);
 
-  const gamesByWeek = filteredGames.reduce<Record<number, Game[]>>(
-    (acc, game) => {
-      if (!acc[game.week]) {
-        acc[game.week] = [];
-      }
+  const gamesByLabel = filteredGames.reduce<Record<string, Game[]>>((acc, game) => {
+    const label = getGameLabel(game);
 
-      acc[game.week].push(game);
-      return acc;
-    },
-    {}
-  );
+    if (!acc[label]) {
+      acc[label] = [];
+    }
+
+    acc[label].push(game);
+
+    return acc;
+  }, {});
 
   return (
     <>
@@ -63,17 +63,14 @@ export function ScheduleView({ games, teams }: Props) {
       </div>
 
       <div className="space-y-10">
-        {Object.entries(gamesByWeek).map(([week, weekGames]) => (
-          <section key={week}>
+        {Object.entries(gamesByLabel).map(([label, labelGames]) => (
+          <section key={label}>
             <h2 className="mb-4 text-2xl font-extrabold text-slate-800">
-              {weekGames[0].gameType === "playoffs"
-                ? `2026 Playoffs — ${getGameLabel(weekGames[0])}s`
-                : getGameLabel(weekGames[0])
-              }
+              {label}
             </h2>
 
             <div className="grid gap-4 md:grid-cols-2">
-              {weekGames.map((game) => (
+              {labelGames.map((game) => (
                 <GameCard key={game.gameId} game={game} />
               ))}
             </div>

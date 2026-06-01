@@ -7,6 +7,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/schedule", label: "Schedule" },
   { href: "/results", label: "Results" },
+  { href: "/bracket", label: "Bracket" },
   { href: "/standings", label: "Standings" },
   { href: "/stats", label: "Stats" },
   { href: "/teams", label: "Teams" },

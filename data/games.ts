@@ -1,7 +1,7 @@
 export type GameType = "regularSeason" | "playoffs" | "championship";
 export type GameStatus = "scheduled" | "final" | "postponed" | "cancelled";
 export type ResultType = "normal" | "forfeitHome" | "forfeitAway";
-export type PlayoffRound = "quarterfinal" | "semifinal";
+export type PlayoffRound = "quarterfinal" | "semifinal" | "championship";
 
 export type Game = {
   gameId: string;
