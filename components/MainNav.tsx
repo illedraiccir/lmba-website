@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/stats", label: "Stats" },
   { href: "/teams", label: "Teams" },
   { href: "/awards", label: "Awards" },
+  { href: "/voting", label: "Voting" }
 ];
 
 export function MainNav() {

@@ -103,6 +103,29 @@ const topThreePointLeaders = [...playerStats]
             </div>
           </section>
 
+          <section className="mb-8 rounded-3xl bg-blue-600 p-6 text-white shadow">
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div>
+                <p className="text-sm font-black uppercase tracking-[0.25em] text-blue-100">
+                  Season Awards
+                </p>
+                <h2 className="mt-1 text-2xl font-black">
+                  2026 Awards Voting Is Open
+                </h2>
+                <p className="mt-1 text-blue-100">
+                  Vote for MVP, All-LM teams, and season-end honors.
+                </p>
+              </div>
+
+              <Link
+                href="/voting"
+                className="rounded-full bg-white px-5 py-3 text-center font-extrabold text-blue-700"
+              >
+                Vote Now →
+              </Link>
+            </div>
+          </section>
+
           <section id="results" className="scroll-mt-28">
             <div className="mb-5 flex items-center justify-between">
               <h2 className="text-3xl font-extrabold text-slate-900">
