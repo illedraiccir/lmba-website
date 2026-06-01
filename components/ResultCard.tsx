@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { teams } from "@/data";
 import type { Game } from "@/data/games";
+import { getGameLabel } from "@/lib/gameLabels";
 
 type ResultCardProps = {
   game: Game;
@@ -40,7 +41,7 @@ export function ResultCard({ game }: ResultCardProps) {
       <div className="p-6">
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <span className="rounded-full bg-slate-100 px-3 py-1 text-sm font-bold text-slate-600">
-            Week {game.week} • {formatGameDate(game.date)}
+            {getGameLabel(game)} • {formatGameDate(game.date)}
           </span>
 
           <span className="rounded-full bg-slate-900 px-3 py-1 text-sm font-bold text-white">

@@ -1,5 +1,6 @@
 import type { Game } from "@/data/games";
 import type { Team } from "@/data/teams";
+import { getGameLabel } from "@/lib/gameLabels";
 
 type GameSummaryHeaderProps = {
   game: Game;
@@ -77,7 +78,7 @@ export function GameSummaryHeader({
       <div className="p-6 md:p-8">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-extrabold uppercase tracking-wide text-slate-500">
-            Week {game.week} • {formatDate(game.date)} • {game.time}
+            {getGameLabel(game)} • {formatDate(game.date)} • {game.time}
           </span>
 
           <span className="rounded-full bg-slate-950 px-4 py-2 text-sm font-extrabold uppercase text-white">

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { teams } from "@/data";
 import type { Game } from "@/data/games";
+import { getGameLabel } from "@/lib/gameLabels";
 
 type GameCardProps = {
   game: Game;
@@ -68,7 +69,7 @@ export function GameCard({ game }: GameCardProps) {
 
         <div className="mt-auto border-t border-slate-100 pt-4">
           <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 sm:text-sm">
-            <span>Week {game.week}</span>
+            <span>{getGameLabel(game)}</span>
             <span className="text-right">{game.location}</span>
           </div>
 

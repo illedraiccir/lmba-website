@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { GameCard } from "@/components/GameCard";
 import type { Game } from "@/data/games";
 import type { Team } from "@/data/teams";
+import { getGameLabel } from "@/lib/gameLabels";
 
 type Props = {
   games: Game[];
@@ -65,7 +66,10 @@ export function ScheduleView({ games, teams }: Props) {
         {Object.entries(gamesByWeek).map(([week, weekGames]) => (
           <section key={week}>
             <h2 className="mb-4 text-2xl font-extrabold text-slate-800">
-              Week {week}
+              {weekGames[0].gameType === "playoffs"
+                ? `2026 Playoffs — ${getGameLabel(weekGames[0])}s`
+                : getGameLabel(weekGames[0])
+              }
             </h2>
 
             <div className="grid gap-4 md:grid-cols-2">
