@@ -273,5 +273,51 @@ export const weeklyAwards: WeeklyAward[] = [
     seasonTeamId: "2026-thrillers",
     title: "Keeping Thrillers Alive",
     body: "With Thrillers fighting to avoid a brutal first-round playoff matchup entering the final week of the regular season, Brett Ziller delivered one of the biggest performances of their season. Ziller poured in 24 points — including 10 in the second half — to lead Thrillers past Hash-Slinging Slashers and improve the team to 3-6. Even more impressive: Ziller has now been part of all three Thrillers victories this season, continuing to prove he’s the engine behind every big Thrillers win.",
+  },
+  {
+    awardId: "2026-w7-player-of-the-week",
+    seasonId: "2026",
+    week: 7,
+    awardName: "Player of the Week",
+    recipientName: "Grant Clark",
+    playerId: "grant-clark",
+    seasonTeamId: "2026-department-of-offense",
+    title: "No Days Off",
+    body:
+      "Grant Clark saved his best basketball for the final week of the regular season. Less than 24 hours before Department of Offense's matchup with Prestige Worldwide, Clark poured in 24 points and six three-pointers in a near-upset of LMBA Jam, a team that may have been guilty of looking ahead to its winner-take-all showdown with Ball Starz for the No. 1 seed. Clark followed it up with 17 more points in a crucial win over Prestige Worldwide, helping Department of Offense avoid a seeding tiebreaker and swing the playoff picture from a potential 6-seed finish to the 4-seed. Across two games, Clark totaled 41 points and nine three-pointers while playing a major role in one of the most impactful stretches of the season.",
+  },
+  {
+    awardId: "2026-w7-lock-the-door-award",
+    seasonId: "2026",
+    week: 7,
+    awardName: "Lock The Door & Throw Away The Key Award",
+    recipientName: "Ball Starz",
+    seasonTeamId: "2026-ball-starz",
+    title: "Nine Points. That's It.",
+    body:
+      "With the No. 1 seed hanging in the balance, Ball Starz delivered the most dominant half of basketball played all season. After taking a 31-26 lead into halftime, the Ball Starz completely shut down LMBA Jam over the final 20 minutes, allowing just nine second-half points while outscoring them 37-9. What began as a heavyweight battle for first place quickly turned into a statement. The victory secured the regular-season championship, the No. 1 playoff seed, and sent a clear message to the rest of the league: if you want the title, you'll have to go through the Ball Starz.",
+  },
+  {
+    awardId: "2026-w7-youre-coming-with-us-award",
+    seasonId: "2026",
+    week: 7,
+    awardName: "You're Coming With Us Award",
+    recipientName: "Prestige Worldwide",
+    seasonTeamId: "2026-prestige-worldwide",
+    title: "You're Coming With Us",
+    body:
+      "Entering the final week, Thrillers still had a chance to improve their playoff position. Prestige Worldwide had other ideas. Led by Thomas Hays' 19 points and Kevin Carroll's four three-pointers, Prestige rolled to a 60-45 victory that effectively sealed Thrillers' fate in the standings. Prestige may not have finished exactly where it wanted, but it made sure Thrillers weren't climbing past them on the final week of the regular season.",
+  },
+  {
+    awardId: "2026-w7-sharpshooter-award",
+    seasonId: "2026",
+    week: 7,
+    awardName: "Sharpshooter Award",
+    recipientName: "Kyle Kelly",
+    playerId: "kyle-kelly",
+    seasonTeamId: "2026-department-of-offense",
+    title: "Six Pack",
+    body:
+      "Kyle Kelly saved one of his best shooting performances of the season for the final week. Kelly buried six three-pointers and scored 19 points in Department of Offense's 60-49 victory over Prestige Worldwide, helping DOO secure a crucial victory and climb to the 4-seed. Every time Prestige threatened to make a run, Kelly seemed to have an answer waiting from beyond the arc.",
   }
 ];
