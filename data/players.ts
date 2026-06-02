@@ -325,10 +325,10 @@ export const players: Player[] = [
     "displayName": "Connor Holm"
   },
   {
-    "playerId": "jack-bauman",
-    "firstName": "Jack",
+    "playerId": "jake-bauman",
+    "firstName": "Jake",
     "lastName": "Bauman",
-    "displayName": "Jack Bauman"
+    "displayName": "Jake Bauman"
   },
   {
     "playerId": "ben-golden",
