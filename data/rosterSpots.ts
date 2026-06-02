@@ -381,7 +381,7 @@ export const rosterSpots: RosterSpot[] = [
     "seasonId": "2026",
     "seasonTeamId": "2026-hash-slinging-slashers",
     "teamId": "hash-slinging-slashers",
-    "playerId": "jack-bauman",
+    "playerId": "jake-bauman",
     "jerseyNumber": 6
   },
   {
