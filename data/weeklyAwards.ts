@@ -328,7 +328,7 @@ export const weeklyAwards: WeeklyAward[] = [
     recipientName: "Manthan Tailor",
     playerId: "manthan-tailor",
     seasonTeamId: "2026-thrillers",
-    title: "First Shot, Last Word Award",
+    title: "First Shot, Last Word",
     body:
       "Manthan Tailor spent the entire night doing the little things for the Thrillers and never attempted a shot. Then, with the defending champions clinging to a two-point lead in overtime, chaos struck. A late turnover gave Thrillers one final possession, and Tailor found himself alone in the far corner. As teammates and the bench screamed 'SHOOT!', he launched the first shot of his game... NOTHING BUT NET! BALL GAME! The buzzer-beating three completed one of the biggest playoff upsets in league history, sending Thrillers to the semifinals and ending LMBA Jam's title defense in stunning fashion.",
   },
