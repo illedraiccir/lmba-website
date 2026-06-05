@@ -1,6 +1,21 @@
 import Link from "next/link";
 
-const quarterfinals = [
+type BracketGame = {
+  gameId: string;
+  seedA: number;
+  teamA: string;
+  recordA: string;
+  seedB: number;
+  teamB: string;
+  recordB: string;
+  time: string;
+  note?: string;
+  scoreA?: number;
+  scoreB?: number;
+  winner?: "A" | "B";
+};
+
+const quarterfinals: BracketGame[] = [
   {
     gameId: "2026-p-qf-g01",
     seedA: 1,
@@ -10,9 +25,13 @@ const quarterfinals = [
     teamB: "Free Agent Team",
     recordB: "1-9",
     time: "Tue 6/2 · 7:30 PM",
+    note: "Ball Starz advanced by forfeit.",
+    scoreA: 60,
+    scoreB: 20,
+    winner: "A",
   },
   {
-    gameId: "2026-p-qf-g03",
+    gameId: "2026-p-qf-g04",
     seedA: 4,
     teamA: "Department of Offense",
     recordA: "5-5",
@@ -20,9 +39,13 @@ const quarterfinals = [
     teamB: "Hash-Slinging Slashers",
     recordB: "5-5",
     time: "Wed 6/3 · 6:30 PM",
+    note: "DOO advanced with only five players after overcoming a halftime deficit.",
+    scoreA: 50,
+    scoreB: 49,
+    winner: "A",
   },
   {
-    gameId: "2026-p-qf-g04",
+    gameId: "2026-p-qf-g03",
     seedA: 3,
     teamA: "Trust The Process",
     recordA: "7-3",
@@ -30,6 +53,10 @@ const quarterfinals = [
     teamB: "Prestige Worldwide",
     recordB: "3-7",
     time: "Wed 6/3 · 7:30 PM",
+    note: "Trust The Process held Thomas Hays scoreless in a dominant win.",
+    scoreA: 67,
+    scoreB: 46,
+    winner: "A",
   },
   {
     gameId: "2026-p-qf-g02",
@@ -40,6 +67,10 @@ const quarterfinals = [
     teamB: "Thrillers",
     recordB: "3-7",
     time: "Tue 6/2 · 8:30 PM",
+    note: "Thrillers stunned the defending champs on a buzzer-beater in OT.",
+    scoreA: 51,
+    scoreB: 52,
+    winner: "B",
   },
 ];
 
@@ -47,22 +78,36 @@ function TeamRow({
   seed,
   team,
   record,
+  score,
+  isWinner = false,
   muted = false,
 }: {
   seed?: number;
   team: string;
   record?: string;
+  score?: number;
+  isWinner?: boolean;
   muted?: boolean;
 }) {
   return (
     <div
       className={`flex items-center justify-between gap-3 rounded-xl px-4 py-3 ${
-        muted ? "bg-slate-100 text-slate-400" : "bg-slate-50 text-slate-950"
+        isWinner
+          ? "bg-slate-950 text-white"
+          : muted
+            ? "bg-slate-100 text-slate-400"
+            : "bg-slate-50 text-slate-950"
       }`}
     >
       <div className="flex min-w-0 items-center gap-3">
         {seed ? (
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-950 text-xs font-black text-white">
+          <span
+            className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-black ${
+              isWinner
+                ? "bg-white text-slate-950"
+                : "bg-slate-950 text-white"
+            }`}
+          >
             {seed}
           </span>
         ) : (
@@ -71,13 +116,22 @@ function TeamRow({
           </span>
         )}
 
-        <span className="truncate font-extrabold">{team}</span>
+        <div className="min-w-0">
+          <span className="block truncate font-extrabold">{team}</span>
+          {record && (
+            <span
+              className={`text-xs font-bold ${
+                isWinner ? "text-slate-200" : "text-slate-500"
+              }`}
+            >
+              {record}
+            </span>
+          )}
+        </div>
       </div>
 
-      {record && (
-        <span className="shrink-0 text-sm font-bold text-slate-500">
-          {record}
-        </span>
+      {typeof score === "number" && (
+        <span className="shrink-0 text-2xl font-black">{score}</span>
       )}
     </div>
   );
@@ -94,6 +148,9 @@ function MatchupCard({
   recordB,
   time,
   note,
+  scoreA,
+  scoreB,
+  winner,
   muted = false,
 }: {
   round: string;
@@ -105,6 +162,9 @@ function MatchupCard({
   teamB: string;
   recordB?: string;
   time?: string;
+  scoreA?: number;
+  scoreB?: number;
+  winner?: "A" | "B";
   note?: string;
   muted?: boolean;
 }) {
@@ -129,8 +189,23 @@ function MatchupCard({
       </div>
 
       <div className="space-y-2">
-        <TeamRow seed={seedA} team={teamA} record={recordA} muted={muted} />
-        <TeamRow seed={seedB} team={teamB} record={recordB} muted={muted} />
+        <TeamRow
+          seed={seedA}
+          team={teamA}
+          record={recordA}
+          score={scoreA}
+          isWinner={winner === "A"}
+          muted={muted}
+        />
+
+        <TeamRow
+          seed={seedB}
+          team={teamB}
+          record={recordB}
+          score={scoreB}
+          isWinner={winner === "B"}
+          muted={muted}
+        />
       </div>
 
       {note && <p className="mt-4 text-sm font-semibold text-slate-500">{note}</p>}
@@ -154,7 +229,7 @@ export default function BracketPage() {
         <section className="mb-8 overflow-hidden rounded-[2rem] bg-slate-950 shadow-xl">
           <div className="bg-gradient-to-r from-blue-600 via-slate-900 to-slate-950 p-8 text-white md:p-10">
             <p className="text-sm font-black uppercase tracking-[0.35em] text-blue-200">
-              2026 LMBA Playoffs
+              2026 LM Playoffs
             </p>
 
             <h1 className="mt-4 max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
@@ -179,14 +254,14 @@ export default function BracketPage() {
           <div className="rounded-2xl bg-white p-5 shadow">
             <p className="text-sm font-bold text-slate-500">Top Contenders</p>
             <p className="mt-1 text-2xl font-black text-slate-950">
-              LMBA / TTP
+              TTP / DOO
             </p>
           </div>
 
           <div className="rounded-2xl bg-white p-5 shadow">
             <p className="text-sm font-bold text-slate-500">Chaos Zone</p>
             <p className="mt-1 text-2xl font-black text-slate-950">
-              Seeds 4-6
+              Thrillers
             </p>
           </div>
 
@@ -220,6 +295,9 @@ export default function BracketPage() {
                   teamB={game.teamB}
                   recordB={game.recordB}
                   time={game.time}
+                  scoreA={game.scoreA}
+                  scoreB={game.scoreB}
+                  winner={game.winner}
                 />
               ))}
             </div>
@@ -236,20 +314,30 @@ export default function BracketPage() {
             <div className="space-y-5 lg:pt-20">
               <MatchupCard
                 round="Semifinal"
-                teamA="Ball Starz / Free Agent Team"
-                teamB="DOO / HSH"
+                gameId="2026-p-sf-g01"
+                seedA={1}
+                teamA="Ball Starz"
+                recordA="9-1"
+                seedB={4}
+                teamB="Department of Offense"
+                recordB="5-5"
+                time="Mon 6/8 · 7:30 PM"
                 note="Winner advances to the championship."
-                muted
               />
 
               <div className="hidden h-20 lg:block" />
 
               <MatchupCard
                 round="Semifinal"
-                teamA="TTP / Prestige"
-                teamB="LMBA Jam / Thrillers"
+                gameId="2026-p-sf-g02"
+                seedA={3}
+                teamA="Trust The Process"
+                recordA="7-3"
+                seedB={7}
+                teamB="Thrillers"
+                recordB="3-7"
+                time="Mon 6/8 · 8:30 PM"
                 note="Winner advances to the championship."
-                muted
               />
             </div>
           </section>
@@ -267,7 +355,8 @@ export default function BracketPage() {
                 round="Championship"
                 teamA="Semifinal Winner"
                 teamB="Semifinal Winner"
-                note="Winner claims the 2026 LMBA championship."
+                time="Thurs 6/11 · 8:30 PM"
+                note="Winner claims the 2026 LM championship."
                 muted
               />
             </div>

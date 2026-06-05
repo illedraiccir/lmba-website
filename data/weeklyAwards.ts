@@ -354,5 +354,27 @@ export const weeklyAwards: WeeklyAward[] = [
     title: "Refused To Let The Season End",
     body:
       "Every time LMBA Jam looked ready to put the game away, MVP-contender Doug Adams answered. With Thrillers trailing by double digits multiple times in the second half, Adams kept firing from deep and attacking the basket. His biggest play came with just over a minute remaining when he converted a critical and-one to tie the game at 47 and force the defending champions to sweat. Adams finished with 23 points and carried Thrillers to one of the greatest playoff upsets the league has ever seen.",
+  },
+  {
+    awardId: "2026-qf-witness-protection-award",
+    seasonId: "2026",
+    week: 8,
+    awardName: "Witness Protection Award",
+    recipientName: "Trust The Process Defense",
+    seasonTeamId: "2026-trust-the-process",
+    title: "Has Anyone Seen Tom Hays?",
+    body:
+      "Thomas Hays entered the playoffs averaging 15.0 points per game and serving as Prestige Worldwide's primary offensive weapon. By the end of the quarterfinals, he had completely disappeared from the box score. Trust The Process swarmed every touch, denied driving lanes, and forced Prestige to search elsewhere for offense. The result was a dominant 67-46 victory and a semifinal berth, highlighted by one of the most impressive defensive performances of the season.",
+  },
+  {
+    awardId: "2026-qf-no-subs-no-problem-award",
+    seasonId: "2026",
+    week: 8,
+    awardName: "No Subs, No Problem Award",
+    recipientName: "Department of Offense",
+    seasonTeamId: "2026-department-of-offense",
+    title: "Five Guys",
+    body:
+      "Department of Offense entered the quarterfinals with exactly five available players and no margin for error. After falling behind by six at halftime against a fully loaded Hash-Slinging Slashers squad, DOO simply refused to fold. Led by Eli Ratliff's 17 points and contributions from every player in the lineup, Department of Offense battled through fatigue, erased the deficit, and completed one of the grittiest wins of the season to advance to the semifinals.",
   }
 ];
