@@ -36,6 +36,9 @@ export default function HomePage() {
     )
     .slice(0, 3);
 
+  const recentResultsLabel =
+    recentResults.length > 0 ? getGameLabel(recentResults[0]) : "Recent";
+
   const playerStats = getPlayerSeasonStats("2026");
 
   const topPpgLeaders = [...playerStats]
@@ -77,6 +80,13 @@ const topThreePointLeaders = [...playerStats]
   const latestWeeklyAwards = weeklyAwards.filter(
     (award) => award.seasonId === "2026" && award.week === latestAwardWeek
   );
+
+  const latestAwardsLabel =
+    latestAwardWeek >= 8
+      ? latestWeeklyAwards.length > 0
+        ? "Quarterfinal"
+        : "Playoff"
+      : `Week ${latestAwardWeek}`;
 
   return (
     <main className="min-h-screen bg-slate-100 px-6 py-10">
@@ -129,7 +139,9 @@ const topThreePointLeaders = [...playerStats]
           <section id="results" className="scroll-mt-28">
             <div className="mb-5 flex items-center justify-between">
               <h2 className="text-3xl font-extrabold text-slate-900">
-                Recent Results
+                {recentResultsLabel === "Week 7"
+                  ? "Recent Results"
+                  : `${recentResultsLabel} Results`}
               </h2>
 
               <Link
@@ -151,11 +163,13 @@ const topThreePointLeaders = [...playerStats]
             <div className="mb-6 flex items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-extrabold uppercase tracking-[0.25em] text-blue-600">
-                  Weekly Awards
+                  {latestAwardWeek >= 8 ? "Playoff Awards" : "Weekly Awards"}
                 </p>
 
                 <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900">
-                  Week {latestAwardWeek} Honors
+                  {latestAwardWeek >= 8
+                    ? `${latestAwardsLabel} Honors`
+                    : `Week ${latestAwardWeek} Honors`}
                 </h2>
               </div>
 

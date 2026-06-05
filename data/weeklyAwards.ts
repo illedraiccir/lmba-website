@@ -319,5 +319,40 @@ export const weeklyAwards: WeeklyAward[] = [
     title: "Six Pack",
     body:
       "Kyle Kelly saved one of his best shooting performances of the season for the final week. Kelly buried six three-pointers and scored 19 points in Department of Offense's 60-49 victory over Prestige Worldwide, helping DOO secure a crucial victory and climb to the 4-seed. Every time Prestige threatened to make a run, Kelly seemed to have an answer waiting from beyond the arc.",
+  },
+  {
+    awardId: "2026-qf-mvp-award",
+    seasonId: "2026",
+    week: 8,
+    awardName: "Quarterfinals MVP Award",
+    recipientName: "Manthan Tailor",
+    playerId: "manthan-tailor",
+    seasonTeamId: "2026-thrillers",
+    title: "First Shot, Last Word Award",
+    body:
+      "Manthan Tailor spent the entire night doing the little things for the Thrillers and never attempted a shot. Then, with the defending champions clinging to a two-point lead in overtime, chaos struck. A late turnover gave Thrillers one final possession, and Tailor found himself alone in the far corner. As teammates and the bench screamed 'SHOOT!', he launched the first shot of his game... NOTHING BUT NET! BALL GAME! The buzzer-beating three completed one of the biggest playoff upsets in league history, sending Thrillers to the semifinals and ending LMBA Jam's title defense in stunning fashion.",
+  },
+  {
+    awardId: "2026-qf-dont-come-out-the-house-award",
+    seasonId: "2026",
+    week: 8,
+    awardName: "Don't Come Out The House Award",
+    recipientName: "Free Agent Team",
+    seasonTeamId: "2026-free-agent-team",
+    title: "'Cause The Gang Outside",
+    body:
+      "Free Agent Team took one look at the quarterfinal matchup with Ball Starz and decided discretion was the better part of valor. After Ball Starz put 90 on their head in both regular-season meetings, the No. 8 seed did not even show up to the gym for the playoff rematch. Ball Starz advanced without breaking a sweat, while Free Agent Team earned the rare postseason award for staying home entirely.",
+  },
+  {
+    awardId: "2026-qf-big-baller-award",
+    seasonId: "2026",
+    week: 8,
+    awardName: "Quarterfinals Big Baller Award",
+    recipientName: "Doug Adams",
+    playerId: "doug-adams",
+    seasonTeamId: "2026-thrillers",
+    title: "Refused To Let The Season End",
+    body:
+      "Every time LMBA Jam looked ready to put the game away, MVP-contender Doug Adams answered. With Thrillers trailing by double digits multiple times in the second half, Adams kept firing from deep and attacking the basket. His biggest play came with just over a minute remaining when he converted a critical and-one to tie the game at 47 and force the defending champions to sweat. Adams finished with 23 points and carried Thrillers to one of the greatest playoff upsets the league has ever seen.",
   }
 ];

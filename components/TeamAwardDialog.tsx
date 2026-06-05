@@ -44,7 +44,11 @@ export function TeamAwardDialog({ award }: TeamAwardDialogProps) {
             </button>
 
             <p className="text-sm font-extrabold uppercase tracking-[0.25em] text-blue-600">
-              Week {award.week}
+              {award.week === 8
+                ? "Quarterfinal"
+                : award.week === 9
+                  ? "Semifinal"
+                  : `Week ${award.week}`}
             </p>
 
             <h2 className="mt-3 text-3xl font-black text-slate-950">

@@ -1,22 +1,41 @@
 import { AwardCard } from "@/components/AwardCard";
 import { weeklyAwards } from "@/data/weeklyAwards";
 
+function getAwardPeriodLabel(week: number) {
+  if (week === 8) return "Quarterfinal Awards";
+  if (week === 9) return "Semifinal Awards";
+  if (week === 10) return "Championship Awards";
+
+  return `Week ${week}`;
+}
+
+function groupAwardsByWeek(awards: typeof weeklyAwards) {
+  return awards.reduce<Record<number, typeof weeklyAwards>>((acc, award) => {
+    if (!acc[award.week]) acc[award.week] = [];
+    acc[award.week].push(award);
+    return acc;
+  }, {});
+}
+
 export default function AwardsPage() {
   const sortedWeeklyAwards = [...weeklyAwards].sort((a, b) => {
     if (b.week !== a.week) return b.week - a.week;
     return a.awardName.localeCompare(b.awardName);
   });
 
-  const awardsByWeek = sortedWeeklyAwards.reduce<Record<number, typeof weeklyAwards>>(
-    (acc, award) => {
-      if (!acc[award.week]) acc[award.week] = [];
-      acc[award.week].push(award);
-      return acc;
-    },
-    {}
+  const playoffAwards = sortedWeeklyAwards.filter((award) => award.week >= 8);
+  const regularSeasonAwards = sortedWeeklyAwards.filter(
+    (award) => award.week <= 7
   );
 
-  const weeks = Object.keys(awardsByWeek)
+  const playoffAwardsByWeek = groupAwardsByWeek(playoffAwards);
+  const regularSeasonAwardsByWeek = groupAwardsByWeek(regularSeasonAwards);
+
+  const playoffWeeks = Object.keys(playoffAwardsByWeek)
+    .map(Number)
+    .sort((a, b) => b - a);
+
+  const regularSeasonWeeks = Object.keys(regularSeasonAwardsByWeek)
     .map(Number)
     .sort((a, b) => b - a);
 
@@ -26,7 +45,8 @@ export default function AwardsPage() {
         <div className="mb-8">
           <h1 className="text-4xl font-extrabold tracking-tight">Awards</h1>
           <p className="mt-2 text-slate-600">
-            Weekly honors, league superlatives, and end-of-season awards.
+            Playoff honors, weekly awards, league superlatives, and
+            end-of-season recognition.
           </p>
         </div>
 
@@ -40,16 +60,43 @@ export default function AwardsPage() {
           </h2>
 
           <p className="mt-5 max-w-3xl leading-8 text-slate-200">
-            From Player of the Week to the most oddly specific men’s league
-            superlatives imaginable, this is where the league personality lives.
+            From playoff chaos to oddly specific men’s league superlatives,
+            this is where the league personality lives.
           </p>
         </section>
 
+        {playoffWeeks.length > 0 && (
+          <section className="mb-14">
+            <h2 className="mb-6 text-3xl font-extrabold">Playoff Awards</h2>
+
+            <div className="space-y-10">
+              {playoffWeeks.map((week) => (
+                <section key={week}>
+                  <div className="mb-4 flex items-center gap-3">
+                    <h3 className="text-2xl font-extrabold">
+                      {getAwardPeriodLabel(week)}
+                    </h3>
+                    <div className="h-px flex-1 bg-slate-300" />
+                  </div>
+
+                  <div className="grid gap-6 md:grid-cols-2">
+                    {playoffAwardsByWeek[week].map((award) => (
+                      <AwardCard key={award.awardId} award={award} />
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section>
-          <h2 className="mb-6 text-3xl font-extrabold">Weekly Awards</h2>
+          <h2 className="mb-6 text-3xl font-extrabold">
+            Regular Season Weekly Awards
+          </h2>
 
           <div className="space-y-10">
-            {weeks.map((week) => (
+            {regularSeasonWeeks.map((week) => (
               <section key={week}>
                 <div className="mb-4 flex items-center gap-3">
                   <h3 className="text-2xl font-extrabold">Week {week}</h3>
@@ -57,7 +104,7 @@ export default function AwardsPage() {
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-2">
-                  {awardsByWeek[week].map((award) => (
+                  {regularSeasonAwardsByWeek[week].map((award) => (
                     <AwardCard key={award.awardId} award={award} />
                   ))}
                 </div>

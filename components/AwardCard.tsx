@@ -5,14 +5,32 @@ type AwardCardProps = {
   award: WeeklyAward;
 };
 
+function getAwardLabel(week: number) {
+  if (week === 8) return "Quarterfinal";
+  if (week === 9) return "Semifinal";
+  if (week === 10) return "Championship";
+  return `Week ${week}`;
+}
+
 export function AwardCard({ award }: AwardCardProps) {
+  const href = award.playerId
+    ? `/players/${award.playerId}`
+    : award.seasonTeamId
+      ? `/teams/${award.seasonTeamId.replace("2026-", "")}`
+      : undefined;
+
   const cardContent = (
     <>
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-bold text-blue-700">
-          Week {award.week}
+          {getAwardLabel(award.week)}
         </span>
-        
+
+        {href && (
+          <span className="text-sm font-bold text-slate-400">
+            View →
+          </span>
+        )}
       </div>
 
       <p className="text-sm font-extrabold uppercase tracking-wide text-blue-600">
@@ -29,10 +47,10 @@ export function AwardCard({ award }: AwardCardProps) {
     </>
   );
 
-  if (award.playerId) {
+  if (href) {
     return (
       <Link
-        href={`/players/${award.playerId}`}
+        href={href}
         className="block rounded-2xl bg-white p-6 shadow transition hover:-translate-y-0.5 hover:shadow-xl"
       >
         {cardContent}
@@ -41,6 +59,8 @@ export function AwardCard({ award }: AwardCardProps) {
   }
 
   return (
-    <article className="rounded-2xl bg-white p-6 shadow">{cardContent}</article>
+    <article className="rounded-2xl bg-white p-6 shadow">
+      {cardContent}
+    </article>
   );
 }
